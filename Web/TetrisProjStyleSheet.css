@@ -306,3 +306,43 @@ label{
 #exit {
     color: red;
 }
+
+/* RANKING */
+#ranking-titulo {
+    font-family: 'Kanit', sans-serif;
+    /*border: 1px red solid;*/
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+#ranking-container {
+    font-family: 'Kanit', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #335BFF;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#ranking-table {
+    width: 100%;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th{
+    background-color: #dadada;
+    color: #000000;
+}
+
+#conteudo:nth-child(even) {
+    background-color: #c9c9c9;
+}
+
+#conteudo:nth-child(odd) {
+    background-color: #e6e6e6;
+}
