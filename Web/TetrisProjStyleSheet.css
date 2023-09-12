@@ -78,6 +78,12 @@ body {
     overflow:hidden;
 }
 
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit
+}
+
 .LogInBox .CadBox{
     margin: -150px 0 0 -190px;
 }
