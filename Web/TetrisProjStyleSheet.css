@@ -17,9 +17,8 @@ body {
     font-family: 'Kanit', sans-serif;
     font-size: 20px;
     position:fixed;
-    bottom: 0cap;
     padding: 20px;
-    height: 30px;
+    height: 10px;
     background-color: whitesmoke;
     border-radius: 5px;
     border-style: solid;
@@ -27,11 +26,13 @@ body {
     border-top-width: 30px;
     border-color: #335BFF;
     overflow:hidden;
+    bottom: 0;
+    left: 7%;
 }
 
 .Navbox a {
 
-    float: left;
+    float: top;
     display: block;
     color: #f2f2f2;
     text-align: center;
