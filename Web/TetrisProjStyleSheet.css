@@ -31,8 +31,6 @@ body {
 }
 
 .Navbox a {
-
-    float: top;
     display: block;
     color: #f2f2f2;
     text-align: center;
@@ -179,11 +177,13 @@ label{
 
 .center-div {
     width: 50%;
-    text-align: center;
-
+    text-align: center;   
     background-color: whitesmoke;
     text-align: left;
-    display: block;
+    display: flex;
+    flex-direction: column; /* Stack child divs vertically */
+    align-items: flex-start; 
+    margin-left: 25px;
     width: 500px;
     height: 800px;
     border-radius: 5px;
@@ -194,6 +194,7 @@ label{
     -webkit-box-shadow: 2px 10px 16px 10px rgba(0,0,0,0.57);
     -moz-box-shadow: 2px 10px 16px 10px rgba(0,0,0,0.57);
     box-shadow: 2px 10px 16px 10px rgba(0,0,0,0.57);
+    
 }
 
 .center-div img {
@@ -203,7 +204,14 @@ label{
 
 .center-div p {
     text-align: center;
+    display:flex;
+    margin-left: 60;
 
+}
+
+.display {
+    display:flex;
+    flex-direction: row;
 }
 
 .right-div {
@@ -263,10 +271,9 @@ label{
 
 
 .tetris-box {
-    width: 60%;
-    height: 80%;
+    width: 250px;
+    height: 500px;
     text-align: center;
-    margin: 5%;
     padding: 10px;
     border: 5px solid #777; /* Cor da borda cinza (exemplo) */
     border-radius: 5px;
@@ -275,14 +282,21 @@ label{
     display:flex;
     flex-wrap: wrap; /*previne que os blocos passem da caixa*/
     background-color: black;
+    margin-left: 40px;
     
 }
 
+
+.title {
+    margin-left:65px;
+    display: flex;
+    flex-direction:column; /* Display its children in a column layout */
+    align-items:flex-end; /* Align children to the start (top) of the container */
+}
+
 .nextshape {
-    float: right;
-    width: 75px;
-    height: 75px;
-    margin: 5%;
+    width: 80px;
+    height: 80px;
     padding: 5px;
     border: 5px solid #777; /* Cor da borda cinza (exemplo) */
     border-radius: 5px;
@@ -291,12 +305,21 @@ label{
     display:flex;
     flex-wrap: wrap; /*previne que os blocos passem da caixa*/
     background-color: black; 
+    max-width: 80px;
+    max-height: 80px;
+    margin-left: 50px;
 }
 
 .tetris-box div {
-    height: 5%;
-    width: 10%;
+    height: 25px;
+    width: 25px;
 }   
+
+.nextshape div{
+    height: 20px;
+    width: 20px;
+    
+}
 
 #ranking {
     color: purple;
@@ -352,4 +375,12 @@ th{
 
 #conteudo:nth-child(odd) {
     background-color: #e6e6e6;
+}
+
+.shape {
+    background-color: rgb(153, 26, 26);
+}
+
+#score {
+    text-align: center;
 }
