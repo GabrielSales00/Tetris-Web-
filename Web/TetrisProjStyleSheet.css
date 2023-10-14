@@ -77,6 +77,10 @@ body {
     overflow:hidden;
 }
 
+#difi_box{
+    text-align: center;
+}
+
 a:link,
 a:visited {
   text-decoration: none;
@@ -104,6 +108,35 @@ a:visited {
 
 .LogIn_button:hover{
     background-color:#bdbdbd;
+    transition: 0.7s;
+}
+
+.difiButton{
+    /*display: inherit;*/
+
+    display: inline-block;
+    width: 115px;
+    height: 80px;
+    margin: 6px;
+    background-color:#fcfcfc;
+    border-width: 2px;
+    border-color: #505050;
+    color: rgb(0, 0, 0);
+    border-style:solid;
+    border-radius: 2px;
+    /*min-height:25px; 
+    min-width: 50px;*/
+}
+
+#difi_ini:hover{
+    background-color:#b6d8ff;
+    border-color: #335BFF;
+    transition: 0.7s;
+}
+
+#difi_exp:hover{
+    background-color:#fdc776;
+    border-color: #ffa600;
     transition: 0.7s;
 }
 
@@ -177,13 +210,11 @@ label{
 
 .center-div {
     width: 50%;
-    text-align: center;   
+    text-align: center;
+
     background-color: whitesmoke;
     text-align: left;
-    display: flex;
-    flex-direction: column; /* Stack child divs vertically */
-    align-items: flex-start; 
-    margin-left: 25px;
+    display: block;
     width: 500px;
     height: 800px;
     border-radius: 5px;
@@ -194,7 +225,6 @@ label{
     -webkit-box-shadow: 2px 10px 16px 10px rgba(0,0,0,0.57);
     -moz-box-shadow: 2px 10px 16px 10px rgba(0,0,0,0.57);
     box-shadow: 2px 10px 16px 10px rgba(0,0,0,0.57);
-    
 }
 
 .center-div img {
@@ -204,14 +234,7 @@ label{
 
 .center-div p {
     text-align: center;
-    display:flex;
-    margin-left: 60;
 
-}
-
-.display {
-    display:flex;
-    flex-direction: row;
 }
 
 .right-div {
@@ -271,9 +294,10 @@ label{
 
 
 .tetris-box {
-    width: 250px;
-    height: 500px;
+    width: 60%;
+    height: 80%;
     text-align: center;
+    margin: 5%;
     padding: 10px;
     border: 5px solid #777; /* Cor da borda cinza (exemplo) */
     border-radius: 5px;
@@ -282,21 +306,14 @@ label{
     display:flex;
     flex-wrap: wrap; /*previne que os blocos passem da caixa*/
     background-color: black;
-    margin-left: 40px;
     
 }
 
-
-.title {
-    margin-left:65px;
-    display: flex;
-    flex-direction:column; /* Display its children in a column layout */
-    align-items:flex-end; /* Align children to the start (top) of the container */
-}
-
 .nextshape {
-    width: 80px;
-    height: 80px;
+    float: right;
+    width: 75px;
+    height: 75px;
+    margin: 5%;
     padding: 5px;
     border: 5px solid #777; /* Cor da borda cinza (exemplo) */
     border-radius: 5px;
@@ -305,21 +322,12 @@ label{
     display:flex;
     flex-wrap: wrap; /*previne que os blocos passem da caixa*/
     background-color: black; 
-    max-width: 80px;
-    max-height: 80px;
-    margin-left: 50px;
 }
 
 .tetris-box div {
-    height: 25px;
-    width: 25px;
+    height: 5%;
+    width: 10%;
 }   
-
-.nextshape div{
-    height: 20px;
-    width: 20px;
-    
-}
 
 #ranking {
     color: purple;
@@ -375,12 +383,4 @@ th{
 
 #conteudo:nth-child(odd) {
     background-color: #e6e6e6;
-}
-
-.shape {
-    background-color: rgb(153, 26, 26);
-}
-
-#score {
-    text-align: center;
 }

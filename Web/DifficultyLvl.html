@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Log-In</title>
-    <script src="Permissions.js"></script>
+    <title>Selecione a Dificuldade</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='TetrisProjStyleSheet.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,24 +17,14 @@
         <source src="./Media/Cloud_Background.mp4" type="video/mp4">
     </video>
 
-    <div class="LogInBox">
-        <p>Bem-Vindo ao Tetris!</p>
-        
-        <label for="name">Nome:</label><br>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="pass_word">Senha:</label><br>
-        <input type="password" id="pass_word" name="pass_word"><br><br>
+    <div class="LogInBox" id="difi_box">
+        <p>Selecione o nível de dificuldade!</p>
 
-
-        <form style="display: inline"><button type="submit" class="LogIn_button" id="log_in" name="log_in" formaction="DifficultyLvl.html">Log-In</button></form> &ensp;
-        <form style="display: inline"><button type="submit" class="LogIn_button" id="log_but" name="log_but"  formaction="CadPag.html">Não tem uma conta?</button></form>
+        <form><button type="submit" class="difiButton" id="difi_ini" name="difi_ini" formaction="Game.html">Quero algo casual!</button></form> 
+        <form><button type="submit" class="difiButton" id="difi_exp" name="difi_exp"  formaction="Game.html">Quero um pesadelo em forma de blocos!</button></form> 
     </div>
 
     <audio src="./Media/YabujinFLASHCASANOVA.mp3" preload="auto" autoplay loop></audio>
 
-
-
-
-    
 </body>
 </html>
