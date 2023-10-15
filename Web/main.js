@@ -14,6 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
         
     const width = 10;
 
+    /*Cria o array de cores para as peças*/
+    const colors = [
+        'orange',
+        'red',
+        'purple',
+        'rgb(255, 255, 0)',
+        'rgb(0, 173, 230)', 
+        'blue',
+        'green',
+        'pink' 
+      ];
+
 
     console.log(squares);
 
@@ -95,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         upNextShape[random].forEach(index => {
             nextSquares[nextIndex + index].classList.add('shape');
+            nextSquares[nextIndex + index].style.backgroundColor = colors[random];
         })
     }
 
