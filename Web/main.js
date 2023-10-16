@@ -2,6 +2,17 @@
 //e passado. 
 
 document.addEventListener('DOMContentLoaded', () => {
+    //timer
+    let time = 0;
+    const timerElem = document.getElementById('timer');
+    function updateCounter() {
+        time++;
+        timerElem.innerHTML = `${time}`;
+    }
+
+    const timer = setInterval(updateCounter, 1000 );
+
+
     /*Esse método procura por algum elemento no .html cuja classe 
     tem o nome de "tetris-box" */
     /*Agora sempre que modificarmos 'tetris-box', queremos modificar todos
