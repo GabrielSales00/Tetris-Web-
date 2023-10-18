@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
       }
   
-      else if(e.keyCode == 38){
+      else if(e.keyCode == 90){
         rotate();
       }
   
@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
         moveDown();
       }
   
-      else if(e.keyCode == 32){
+      else if(e.keyCode == 88){
         hardDrop();
       }
     }
