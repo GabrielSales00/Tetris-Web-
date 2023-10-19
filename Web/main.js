@@ -9,8 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
     let res = "";
   
-  
-  
     const tetrisGrid = document.querySelector('.grid');
   
     const storedRes = localStorage.getItem('res');
@@ -632,34 +630,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
   }
-  
-  const audioDrop = document.getElementById('drop');
-  const audioTetris = document.getElementById('tetris');
-  const lostTetris =  document.getElementById('lost');
-  
-  function dropSFX() {
-    audioDrop.play();
-  }
-  
-  function tetrisSFX() {
-    audioTetris.play();
-  }
-  
-  function lostSFX() {
-    lostTetris.play();
-  }
-  
-  function playBackgroundMusic() {
-    const backgroundAudio = document.getElementById('backgroundAudio');
-    backgroundAudio.play();
-    backgroundAudio.volume = 0.3; 
-  }
-  
-  function stopBackgroundMusic() {
-    const backgroundAudio = document.getElementById('backgroundAudio');
-    backgroundAudio.pause();
-    backgroundAudio.currentTime = 0; // Reinicia a música para o início
-  }
-  
   
   })
