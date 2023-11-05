@@ -119,3 +119,37 @@ body {
     justify-content: center;
     background-color: black; 
 }
+
+#difficulty {
+    margin-left:50px;
+    width: 80px;
+    height: 80px;
+
+    border: 5px solid #777; /* Cor da borda cinza (exemplo) */
+    border-radius: 5px;
+
+    color: rgb(255, 255, 255); /* Cor do texto dentro da caixa */
+    display: flex;
+    flex-wrap:wrap;
+    align-content:center;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: black; 
+}
+
+#numRows {
+    margin-left:50px;
+    width: 80px;
+    height: 80px;
+
+    border: 5px solid #777; /* Cor da borda cinza (exemplo) */
+    border-radius: 5px;
+
+    color: rgb(255, 255, 255); /* Cor do texto dentro da caixa */
+    display: flex;
+    flex-wrap:wrap;
+    align-content:center;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: black;
+}

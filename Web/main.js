@@ -227,16 +227,38 @@ document.addEventListener('DOMContentLoaded', () => {
     "loTetrominoSpecial"
   ]
 
+  /******Contador de linhas***********************/
+  numRowElem = document.getElementById('numRows');
+  var rowsCleared = 0;
+
+  function updateRowCounter(cleared) {
+    numRowElem.innerHTML = `Linhas: <br> ${cleared}`;
+  }
+
+  updateRowCounter(rowsCleared);
+
+  /**************** Dificuldade ******************/
+  const levelElem = document.getElementById('difficulty');
+
+  var points = 0;
+
+  function updateDiff(levelDiff) {
+    levelElem.innerHTML = `Nível: <br> ${levelDiff}`;
+  }
+
+  updateDiff(points);
+
   /***************Definição do Timer**************/
 
-  //timer
-  let time = 0;
+  var time = -1;
   const timerElem = document.getElementById('timer');
 
   function updateCounter() {
-      time++;
-      timerElem.innerHTML = `${time}`;
+    time++;
+    timerElem.innerHTML = `Timer: <br> ${time}`;
   }
+
+  updateCounter();
 
     
     let currentPos = startPos;
@@ -459,11 +481,13 @@ document.addEventListener('DOMContentLoaded', () => {
   startBtn.addEventListener('click', () => {
     if(timerId){ //se tiver alguma informação no timerId
       clearInterval(timerId); //para o timerId
+      clearInterval(timer);
       timerId = null; //timerId se torna nulo novamente
+      timer = null;
     }
     else{
       drawTetromino();
-      const timer = setInterval(updateCounter, 800);
+      timer = setInterval(updateCounter, currentSpeed);
       timerId = setInterval(moveDown, currentSpeed);
       showNextTetromino();
     }
@@ -592,6 +616,7 @@ document.addEventListener('DOMContentLoaded', () => {
       //scoreDisplay.innerText = "Game Over! :( " //atualiza o texto 
   
       clearInterval(timerId); // pausa o timer
+      clearInterval(timer);
   
       lostSFX();
       //pop up and reload
@@ -605,6 +630,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let newSpeed = calculateNewSpeed();
     if (score % scoreToIncreaseSpeed === 0 &&  newSpeed > minimumSpeed) {
       currentSpeed = newSpeed;
+      updateRowCounter(score / scoreToIncreaseSpeed);
+      updateDiff(score / scoreToIncreaseSpeed);
     }
   }
   
