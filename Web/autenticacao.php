@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -31,6 +30,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 }
-
 $conn->close();
 ?>

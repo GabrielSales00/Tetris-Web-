@@ -616,7 +616,6 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(timerId);
         clearInterval(timer);
         lostSFX();
-        //alert(`sua pontuação foi ${score}!`);
         stopBackgroundMusic();
 
         enviarPontuacaoParaPHP(score);
@@ -625,7 +624,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function enviarPontuacaoParaPHP(pontuacao) {
-    //alert(`sua pontuação foi ${pontuacao}!`);
     fetch('armazenar_pontuacao.php', {
         method: 'POST',
         headers: {
