@@ -1,0 +1,17 @@
+CREATE TABLE usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cpf VARCHAR(20) NOT NULL,
+    apelido VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    telefone VARCHAR(20),
+    nome_completo VARCHAR(100) NOT NULL,
+    senha VARCHAR(100) NOT NULL,
+    nascimento DATE
+);
+
+CREATE TABLE pontuacoes (
+    id_pontuacao INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT NOT NULL,
+    pontuacao INT NOT NULL,
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id)
+);
