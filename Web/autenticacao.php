@@ -15,11 +15,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nomeUsuario = $_POST['name'];
     $senha = $_POST['pass_word'];
 
-    $sql = "SELECT * FROM usuarios WHERE apelido = '$nomeUsuario' AND senha = '$senha'";
+    $sql = "SELECT id, apelido FROM usuarios WHERE apelido = '$nomeUsuario' AND senha = '$senha'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        $_SESSION['apelido'] = $nomeUsuario;
+        $row = $result->fetch_assoc();
+        $_SESSION['id'] = $row['id'];
+        $_SESSION['apelido'] = $row['apelido'];
+        
         header("Location: Game.html");
         exit();
     } else {

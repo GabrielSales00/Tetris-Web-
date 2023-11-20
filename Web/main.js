@@ -611,19 +611,38 @@ document.addEventListener('DOMContentLoaded', () => {
     tetrisSFX();
   }
   
-  function checkGameOver(){
-    if(current.some(index => squares[currentPos + index].classList.contains('taken'))){
-      //scoreDisplay.innerText = "Game Over! :( " //atualiza o texto 
-  
-      clearInterval(timerId); // pausa o timer
-      clearInterval(timer);
-  
-      lostSFX();
-      //pop up and reload
-      alert("Game over :(");
-      window.location.reload();
-      stopBackgroundMusic();
+  function checkGameOver() {
+    if (current.some(index => squares[currentPos + index].classList.contains('taken'))) {
+        clearInterval(timerId);
+        clearInterval(timer);
+        lostSFX();
+        //alert(`sua pontuação foi ${score}!`);
+        stopBackgroundMusic();
+
+        enviarPontuacaoParaPHP(score);
+        window.location.reload();
     }
+  }
+
+  function enviarPontuacaoParaPHP(pontuacao) {
+    //alert(`sua pontuação foi ${pontuacao}!`);
+    fetch('armazenar_pontuacao.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ pontuacao: pontuacao }),
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Pontuação enviada com sucesso!');
+        } else {
+            alert('Erro ao enviar pontuação:', response.statusText);
+        }
+    })
+    .catch(error => {
+         alert('Erro ao enviar pontuação:', error);
+    });
   }
   
   function handleSpeed(){
