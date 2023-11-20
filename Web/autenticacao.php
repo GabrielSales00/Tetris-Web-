@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch_assoc();
         $_SESSION['id'] = $row['id'];
         $_SESSION['apelido'] = $row['apelido'];
-        
+
         header("Location: Game.html");
         exit();
     } else {

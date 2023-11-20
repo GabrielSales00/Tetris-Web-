@@ -51,10 +51,10 @@ $conn->close();
         </table>
     </div>
     <br>
-    <div class="NavBox">
-        <a href="DifficultyLvl.html">Jogar</a>
-        <a href="EditPag.html"> Editar Informações</a>
-        <a href="SignUpPage.html">Sair</a>
-    </div>
+    <nav class="NavBox">
+        <a id="login" href="LoginPage.html">Login &nbsp;&nbsp;</a>
+        <a id="cadastrar" href="CadPag.html">Cadastrar &nbsp;&nbsp;</a>
+        <a id="exit" href="limpa_sessao.php">Sair &nbsp;&nbsp;</a>
+    </nav>
 </body>
 </html>
